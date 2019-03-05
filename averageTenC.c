@@ -18,6 +18,8 @@ Written by: Austin Garrett (MetaRollover)
 Date: 3/5/2019
 */
 
+/*THIS IS NOT YET FINISHED*/
+
 #include <stdio.h> //Include standard input output header file
 
 /*Declarations*/
