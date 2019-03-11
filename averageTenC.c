@@ -23,15 +23,15 @@ Date: 3/5/2019
 #include <stdio.h> //Include standard input output header file
 
 /*Declarations*/
-float * user_input();
-int response(num);
+void user_input(float[]);
+int response(float);
 
 int main(){
-  float *inputArray;
+  float inputArray[10];
   int i;
   float num;
 
-  inputArray = user_input(); //Get 10 numbers and put them into inputArray
+  user_input(inputArray); //Get 10 numbers and put them into inputArray
   for (i = 0; i < 10; i++)
     num += num + inputArray[i];
   num += num / 10;
@@ -40,8 +40,8 @@ int main(){
   return 0;
 }
 
-float * user_input(){
-  static int inputNums[10];
+void user_input(float inputNums[]){
+  //static int inputNums[10];
   printf("Please enter your grades in the format nnn.nn:");
   int i = 0;
   for (i = 0; i < 10; i++){
@@ -49,6 +49,6 @@ float * user_input(){
   }
 }
 
-int response(num){
+int response(float num){
   printf("The average of the 10 numbers you put in, is: %f", &num);
 }
